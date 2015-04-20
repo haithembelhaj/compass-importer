@@ -1,0 +1,29 @@
+{
+  "name": "compass-importer",
+  "version": "0.0.1",
+  "description": "a node-sass importer for compass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haithembelhaj/compass-importer.git"
+  },
+  "keywords": [
+    "sass",
+    "compass",
+    "node-sass"
+  ],
+  "author": "Haithem Bel Haj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haithembelhaj/compass-importer/issues"
+  },
+  "homepage": "https://github.com/haithembelhaj/compass-importer",
+  "dependencies": {
+    "fs-extra": "^0.18.2",
+    "request": "^2.55.0",
+    "unzip": "^0.1.11"
+  }
+}
