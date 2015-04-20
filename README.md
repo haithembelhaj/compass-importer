@@ -24,7 +24,7 @@ var compass = require('compass-importer')
 
 sass.renderSync({
   includePaths: [ '.compass'],
-  data: '.transition { @include transition(all); }',
+  data: '@import "compass"; .transition { @include transition(all); }',
   importer: compass
 });
 
