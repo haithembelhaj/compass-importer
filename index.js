@@ -3,7 +3,7 @@ module.exports = function(url, prev, done) {
     var request, fs, oldHeaders;
     var githubUrl = 'https://github.com/Igosuki/compass-mixins/archive/master.zip';
 
-    if (!/^compass$/.test(url))
+    if (!/^compass/.test(url))
         return done({file: url});
 
     fs = require('fs-extra');
