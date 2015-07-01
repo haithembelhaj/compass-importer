@@ -1,8 +1,7 @@
 module.exports = function(url, prev, done) {
 
-    var request, fs, unzip;
+    var request, fs, oldHeaders;
     var githubUrl = 'https://github.com/Igosuki/compass-mixins/archive/master.zip';
-
 
     if (!/^compass$/.test(url))
         return done({file: url});
@@ -14,22 +13,22 @@ module.exports = function(url, prev, done) {
     if (!fs.existsSync('.compass/headers.json'))
         return download();
 
-    var oldHeaders = fs.readJsonSync('.compass/headers.json');
+    done({file: 'compass-mixins-master/lib/' + url});
+
+    oldHeaders = fs.readJsonSync('.compass/headers.json');
 
     console.log('verify compass version ...');
 
     request.head(githubUrl)
         .on('response', function (res) {
-            if (oldHeaders.etag === res.headers.etag)
-                return done({file: 'compass-mixins-master/lib/' + url});
-
-            download()
+            if (oldHeaders.etag !== res.headers.etag)
+                download()
         });
 
 
     function download() {
 
-        unzip = require('unzip');
+        var unzip = require('unzip');
 
         console.log('downloading compass ...');
 

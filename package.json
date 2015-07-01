@@ -1,6 +1,6 @@
 {
   "name": "compass-importer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a node-sass importer for compass",
   "main": "index.js",
   "scripts": {
