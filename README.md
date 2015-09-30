@@ -20,10 +20,10 @@ the only thing you need to do to make this work is add the importer to the optio
 ### node-sass
 
 ```js
+var sass = require('node-sass');
 var compass = require('compass-importer')
 
 sass.render({
-  includePaths: [ '.compass'],
   data: '@import "compass"; .transition { @include transition(all); }',
   importer: compass
 });
@@ -42,7 +42,6 @@ grunt.initConfig({
     sass:{
        
         options: {
-            includePaths: [ '.compass'],
             importer: compass
         },
         ...        
