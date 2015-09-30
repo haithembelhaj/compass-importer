@@ -5,7 +5,6 @@ var expect = require('chai').expect;
 
 describe('test importer', function(){
 
-
   it('should convert compass sass', function(done){
 
     this.timeout(10000);
