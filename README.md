@@ -20,6 +20,7 @@ the only thing you need to do to make this work is add the importer to the optio
 ### node-sass
 
 ```js
+var sass = require('node-sass');
 var compass = require('compass-importer')
 
 sass.render({
