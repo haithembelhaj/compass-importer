@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/DaniilTomilow/compass-importer.svg)](https://travis-ci.org/DaniilTomilow/compass-importer)
 # compass-importer
 
 A node-sass importer for compass. 
@@ -49,6 +50,25 @@ grunt.initConfig({
 
 })
 ```
+
+### gulp-sass
+
+
+```js
+var gulp = require('gulp')
+var sass = require('gulp-sass')
+var compass = require('compass-importer')
+
+
+gulp.task('sass', function()
+{
+    return gulp.src('sass/**/*.scss')
+      .pipe(sass({ importer: compass }).on('error', sass.logError))
+      .pipe(gulp.dest('./css'));
+
+});
+```
+
 
 ## License
 

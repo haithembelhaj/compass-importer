@@ -6,7 +6,7 @@ var resolve = require('path').resolve;
 
 // vars
 var githubUrl = 'https://github.com/Igosuki/compass-mixins/archive/master.zip';
-var importRegexp = /^compass/;
+var importRegexp = /^compass|^animation/;
 
 // dirs and files
 var cacheDirectory = resolve(__dirname + '/.compass');
