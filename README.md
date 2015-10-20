@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DaniilTomilow/compass-importer.svg)](https://travis-ci.org/DaniilTomilow/compass-importer)
+[![Build Status](https://travis-ci.org/haithembelhaj/compass-importer.svg)](https://travis-ci.org/haithembelhaj/compass-importer)
 # compass-importer
 
 A node-sass importer for compass. 
