@@ -2,7 +2,6 @@ var sass = require('node-sass');
 var compass = require('../index.js');
 var expect = require('chai').expect;
 
-
 describe('test importer', function(){
 
   it('should convert compass sass', function(done){
@@ -30,9 +29,9 @@ describe('test importer', function(){
       importer: compass,
       outputStyle: 'compressed'
     }, function(err, result){
-      console.log(err);
 
       expect(result.css.toString()).to.equal('@-moz-keyframes test{from{background-color:red}to{background-color:yellow}}@-webkit-keyframes test{from{background-color:red}to{background-color:yellow}}@-o-keyframes test{from{background-color:red}to{background-color:yellow}}@-ms-keyframes test{from{background-color:red}to{background-color:yellow}}@keyframes test{from{background-color:red}to{background-color:yellow}}.animation{-webkit-animation:test 1s;-moz-animation:test 1s;-ms-animation:test 1s;-o-animation:test 1s;animation:test 1s}\n');
+
       done(err);
     });
 
