@@ -1,7 +1,6 @@
 ### OSX template
 .DS_Store
 node_modules
-
 .compass
-
 .idea
+/npm-debug.log
