@@ -1,6 +1,6 @@
 {
   "name": "compass-importer",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "a node-sass importer for compass",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/haithembelhaj/compass-importer",
   "dependencies": {
+    "compass-mixins": "^0.12.7",
     "fs-extra": "^0.18.2",
     "request": "^2.55.0",
+    "resolve": "^1.1.7",
     "unzip": "^0.1.11"
   },
   "devDependencies": {
