@@ -5,7 +5,7 @@ var sync = require('resolve').sync;
 var compassPath = sync('compass-mixins');
 var libPath = resolve(compassPath, '..');
 
-var compassRegexp = /^compass|^animation/;
+var compassRegexp = /^compass\/?|^animation\/?/;
 
 // exports
 module.exports = importer;
