@@ -17,7 +17,16 @@ describe('test importer', function(){
 
       done(err);
     });
+  })
 
+  it('should convert compass sass synchronisly', function(){
+
+    var result = sass.renderSync({
+      data: '@import "compass"; .transition { @include transition(all); }',
+      importer: compass
+    })
+
+    expect(result.css.toString()).to.equal('.transition {\n  -webkit-transition: all false false;\n  -moz-transition: all false false false;\n  -o-transition: all false false false;\n  transition: all; }\n');
   })
 
   it('should convert css3 animations', function(done){

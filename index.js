@@ -22,8 +22,19 @@ module.exports = importer;
  */
 function importer(path, _, done) {
 
+  if(!done){
+
+    done = identitiy;
+  }
+
   if (!compassRegexp.test(path))
     return done({file: path});
 
   return done({file: resolve(libPath,  path)})
+}
+
+// identity helper
+function identitiy(x){
+
+  return x;
 }
