@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/haithembelhaj/compass-importer",
   "dependencies": {
-    "compass-mixins": "^0.12.10",
+    "@haithembelhaj/compass-mixins": "^0.12.8",
     "resolve": "^1.1.7"
   },
   "devDependencies": {
