@@ -2,7 +2,7 @@
 var resolve = require('path').resolve;
 var sync = require('resolve').sync;
 
-var compassPath = sync('@haithembelhaj/compass-mixins');
+var compassPath = sync('compass-mixins');
 var libPath = resolve(compassPath, '..');
 
 var compassRegexp = /^compass($|\/)|^animation($|\/)/;

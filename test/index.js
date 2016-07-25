@@ -13,7 +13,7 @@ describe('test importer', function(){
       importer: compass
     }, function(err, result){
 
-      expect(result.css.toString()).to.equal('.transition {\n  -webkit-transition: all false false;\n  -moz-transition: all false false false;\n  -o-transition: all false false false;\n  transition: all; }\n');
+      expect(result.css.toString()).to.equal('.transition {\n  -webkit-transition: all;\n  -moz-transition: all;\n  -o-transition: all;\n  transition: all; }\n');
 
       done(err);
     });
@@ -26,7 +26,7 @@ describe('test importer', function(){
       importer: compass
     })
 
-    expect(result.css.toString()).to.equal('.transition {\n  -webkit-transition: all false false;\n  -moz-transition: all false false false;\n  -o-transition: all false false false;\n  transition: all; }\n');
+    expect(result.css.toString()).to.equal('.transition {\n  -webkit-transition: all;\n  -moz-transition: all;\n  -o-transition: all;\n  transition: all; }\n');
   })
 
   it('should convert css3 animations', function(done){
